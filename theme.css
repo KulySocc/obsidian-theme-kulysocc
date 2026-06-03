@@ -1,6 +1,6 @@
 /* @settings
 
-name: GitHub theme settings
+name: Bumblebee settings
 id: id
 settings:
     -
@@ -50,6 +50,7 @@ settings:
         id: h2-underline
         title: H2 header underline enabled
         type: class-toggle
+        default: true
 
     -
         # Headers Settings
@@ -697,7 +698,7 @@ body {
     --text-on-accent-inverted: black;
     --text-error: var(--color-red);
     --text-success: var(--color-green);
-    --text-selection: hsla(var(--color-accent-hsl), 0.2);
+    --text-selection: hsl(var(--color-accent-hsl));
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
@@ -706,6 +707,10 @@ body {
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
     --interactive-accent-hover: var(--color-accent-2);
+}
+
+::selection {
+    color: var(--text-on-accent);
 }
 
 .theme-dark {
@@ -737,9 +742,9 @@ body {
     --color-base-70: #8b949e;
     --color-base-100: #c9d1d9;
 
-    --accent-h-theme: 212;
-    --accent-s-theme: 100%;
-    --accent-l-theme: 67%;
+    --accent-h-theme: 15;
+    --accent-s-theme: 98%;
+    --accent-l-theme: 50%;
     --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
     --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
@@ -750,7 +755,7 @@ body {
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
-    --text-selection: hsla(var(--interactive-accent-hsl), 0.4);
+    --text-selection: hsl(var(--interactive-accent-hsl));
     --input-shadow: inset 0 0 0 1px #f0f6fc1a;
     --input-shadow-hover: inset 0 0 0 1px var(--color-base-70);
     --shadow-s: none;
@@ -819,9 +824,9 @@ body {
     --color-base-70: #57606a;
     --color-base-100: #24292f;
 
-    --accent-h-theme: 212;
-    --accent-s-theme: 92%;
-    --accent-l-theme: 45%;
+    --accent-h-theme: 15;
+    --accent-s-theme: 98%;
+    --accent-l-theme: 50%;
     --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
     --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
